@@ -59,7 +59,7 @@ If there is an unlimited buffer window (the button press can happen an unlimited
 local BufferDuration = 0.1
 
 local currentBufferStart = JumpButton.useBufferStart()
-if os.clock() - currentBufferStart <= BufferDuration then
+if currentBufferStart and os.clock() - currentBufferStart <= BufferDuration then
 	print("buffered, immediately perform the action")
 else
 	print("not buffered, wait for a jump press to perform the action")
