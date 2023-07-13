@@ -5,6 +5,7 @@
 A simple library for detecting when the local player is holding the jump button in Roblox, with support for buffered inputs.
 
 - [Download the latest release][ReleasesPage]
+- [Download the Roblox model][ModelPage]
 - [Installation steps](#installation)
 - [Recommended usage](#usage)
 - [View the api](#api)
