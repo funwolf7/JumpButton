@@ -1,0 +1,15 @@
+[package]
+name = "funwolf7/jumpbutton"
+description = "A simple library for detecting when the local player is holding the jump button in Roblox, with support for buffered inputs."
+version = "1.0.0"
+
+license = "MIT"
+authors = ["funwolf7"]
+
+realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+
+exclude = ["*"]
+include = ["JumpButton.luau", "default.project.json", "LICENSE"]
+
+[dependencies]
