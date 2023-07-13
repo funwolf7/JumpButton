@@ -38,6 +38,12 @@ JumpButton has a few minor downsides:
 > ### External Editor:
 > Download the `JumpButton.luau` file from the [latest release][ReleasesPage] and insert it into your project in a place accessible to the client.
 
+> ### Wally:
+> Add the following line to your dependencies:
+> ```
+> JumpButton = "funwolf7/jumpbutton@1.0.0"
+> ```
+
 Once installed, regardless of method, simply `require` the ModuleScript, and you now have access to the functions it provides.
 
 ## Usage
@@ -53,7 +59,7 @@ When using buffering, it gets a bit more complicated.
 
 Every time the jump button is pressed, JumpButton stores the timestamp (using `os.clock`), at which it was last pressed. This timestamp is set to nil when the jump button is released or when the buffer is killed (more on killing the buffer below).
 
-When an action that uses the jump button gets enabled, you should retrieve the buffer start using [`JumpButton.useBufferStart()`](#jumpbuttonusebufferstart), which returns the stored timestamp. (**Note:** only call this function once per action, and store the value if needed, as it will return nil the second time it is called. More information on why this occurs in the "Killing the buffer" section.)
+When an action that uses the jump button gets enabled, you should retrieve the buffer start using [`JumpButton.useBufferStart()`](#jumpbuttonusebufferstart), which returns the stored timestamp. (**Note:** only call this function once per action, and store the value if needed, as it will return nil the second time it is called. More information on why this occurs in the ["Killing the buffer"](#killing-the-buffer) section.)
 
 If there is an unlimited buffer window (the button press can happen an unlimited amount of time before the action), then simply checking if the timestamp exists is enough. If there is a limit to the amount of time after the press, you must check first that it exists, and also that less time has passed since the buffer than the buffer duration.
 ```lua
